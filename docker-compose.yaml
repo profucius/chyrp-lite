@@ -4,10 +4,10 @@ services:
     container_name: chyrp-lite
     restart: unless-stopped
     volumes:
-      - data:/data
-      - uploads:/var/www/html/uploads
+      - /root/docker/chyrp/data:/data
+      - /root/docker/chyrp/uploads:/var/www/html/uploads
     ports:
-      - 127.0.0.1:8080:80
+      - 8040:80
 
 # Use SQLite if don't know which database to choose. Set the database path to
 # "/data/db.sqlite" during install. If you need PostgreSQL or MySQL,
